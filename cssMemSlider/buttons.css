@@ -1,36 +1,58 @@
+.labels {
+    display: flex;
+    grid-area: labels;
+}
 
-#btn1:checked ~.labels label:not(:first-child) {
+.labels label {
+    width: clamp(0.8rem, 1.3rem, 2vw);
+    height: clamp(0.8rem, 1.3rem, 2vw);
+    cursor: pointer;
+    background-color: #383636;
+    border: 0.125rem solid #1087c9;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.labels label:not(:last-child) {
+    margin-right: clamp(0.3rem, 1.2rem, 2vw);
+}
+
+.labels label:hover {
+    border-color: #f5fcfc;
+}
+
+#btn1:checked ~.container .labels label:not(:first-child) {
     background-color: #1087c9;
 }
-#btn1:checked ~.labels label:not(:first-child):hover {
+#btn1:checked ~.container .labels label:not(:first-child):hover {
     background-color: #f5fcfc;
     border-color: #f5fcfc;
 }
-#btn2:checked ~.labels label:not(:nth-child(2)) {
+#btn2:checked ~.container .labels label:not(:nth-child(2)) {
     background-color: #1087c9;
 }
-#btn2:checked ~.labels label:not(:nth-child(2)):hover {
+#btn2:checked ~.container .labels label:not(:nth-child(2)):hover {
     background-color: #f5fcfc;
     border-color: #f5fcfc;
 }
-#btn3:checked ~.labels label:not(:nth-child(3)) {
+#btn3:checked ~.container .labels label:not(:nth-child(3)) {
     background-color: #1087c9;
 }
-#btn3:checked ~.labels label:not(:nth-child(3)):hover {
+#btn3:checked ~.container .labels label:not(:nth-child(3)):hover {
     background-color: #f5fcfc;
     border-color: #f5fcfc;
 }
-#btn4:checked ~.labels label:not(:nth-child(4)) {
+#btn4:checked ~.container .labels label:not(:nth-child(4)) {
     background-color: #1087c9;
 }
-#btn4:checked ~.labels label:not(:nth-child(4)):hover {
+#btn4:checked ~.container .labels label:not(:nth-child(4)):hover {
     background-color: #f5fcfc;
     border-color: #f5fcfc;
 }
-#btn5:checked ~.labels label:not(:nth-child(5)) {
+#btn5:checked ~.container .labels label:not(:nth-child(5)) {
     background-color: #1087c9;
 }
-#btn5:checked ~.labels label:not(:nth-child(5)):hover {
+#btn5:checked ~.container .labels label:not(:nth-child(5)):hover {
     background-color: #f5fcfc;
     border-color: #f5fcfc;
 }
