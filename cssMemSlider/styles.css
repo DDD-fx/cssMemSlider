@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Courier Prime", serif;
+    font-weight: 400;
+    padding: 1rem;
+    background-color: #efefef;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 5rem);
+    font-weight: 700;
+    text-align: center;
+    color: #084e76;
+    margin-bottom: max(1rem, 2rem);
+}
+
+input {
+    appearance: none;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav label {
+    width: max(1.3rem, 3rem);
+    height: max(1.3rem, 3rem);
+    cursor: pointer;
+    background-color: azure;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.nav label:not(:last-child) {
+    margin-right: max(1.3rem, 3rem);
+}
+
+.nav label:hover {
+    background-color: #91eeee;
+}
+
+
+
+.slider {
+    overflow: hidden;
+    max-width: 100%;
+    margin-bottom: max(1rem, 2rem);
+}
+
+.slide {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+.slide img{
+    max-width: 100%;
+}
+
+
+#btn1:checked~.init {
+    margin-left: 0;
+}
+
+#btn2:checked~.init {
+    margin-left: -40%;
+}
+
+#btn3:checked~.init {
+    margin-left: -80%;
+}
+
+#btn4:checked~.init {
+    margin-left: -120%;
+}
+
+#btn5:checked~.init {
+    margin-left: -160%;
+}
+
+.wrapper {
+    width: 500%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn2:checked #label2 {
+    background-color: #084e76;
+}
