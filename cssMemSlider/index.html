@@ -9,6 +9,7 @@
     <title>Title</title>
     <link rel="stylesheet" href="./normalize.css">
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./buttons.css">
 </head>
 
 <body>
@@ -16,38 +17,29 @@
 <h1 class="title">RSS CSS-Meme-Slider</h1>
 
 <div class="slider">
+    <input type="radio" name="meme-btn" id="btn1" checked>
+    <input type="radio" name="meme-btn" id="btn2">
+    <input type="radio" name="meme-btn" id="btn3">
+    <input type="radio" name="meme-btn" id="btn4">
+    <input type="radio" name="meme-btn" id="btn5">
     <div class="wrapper">
-        <input type="radio" name="meme-btn" id="btn1">
-        <input type="radio" name="meme-btn" id="btn2">
-        <input type="radio" name="meme-btn" id="btn3">
-        <input type="radio" name="meme-btn" id="btn4">
-        <input type="radio" name="meme-btn" id="btn5">
+        <div class="slide meme-1 init"><img src="img/1.webp" alt="1"></div>
+        <div class="slide meme-2"><img src="img/2.webp" alt="2"></div>
+        <div class="slide meme-3"><img src="img/3.webp" alt="3"></div>
+        <div class="slide meme-4"><img src="img/4.webp" alt="4"></div>
+        <div class="slide meme-5"><img src="img/5.webp" alt="5"></div>
+    </div>
 
-        <div class="slide init">
-            <img src="img/1.webp" alt="1">
-        </div>
-        <div class="slide">
-            <img src="img/2.webp" alt="2">
-        </div>
-        <div class="slide">
-            <img src="img/3.webp" alt="3">
-        </div>
-        <div class="slide">
-            <img src="img/4.webp" alt="4">
-        </div>
-        <div class="slide">
-            <img src="img/5.webp" alt="5">
-        </div>
+    <div class="labels">
+        <label for="btn1"></label>
+        <label for="btn2"></label>
+        <label for="btn3"></label>
+        <label for="btn4"></label>
+        <label for="btn5"></label>
     </div>
 </div>
 
-<div class="nav">
-    <label for="btn1" id="label1"></label>
-    <label for="btn2" id="label2"></label>
-    <label for="btn3"></label>
-    <label for="btn4"></label>
-    <label for="btn5"></label>
-</div>
+
 
 
 </body>

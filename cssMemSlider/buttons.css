@@ -1,0 +1,36 @@
+
+#btn1:checked ~.labels label:not(:first-child) {
+    background-color: #1087c9;
+}
+#btn1:checked ~.labels label:not(:first-child):hover {
+    background-color: #f5fcfc;
+    border-color: #f5fcfc;
+}
+#btn2:checked ~.labels label:not(:nth-child(2)) {
+    background-color: #1087c9;
+}
+#btn2:checked ~.labels label:not(:nth-child(2)):hover {
+    background-color: #f5fcfc;
+    border-color: #f5fcfc;
+}
+#btn3:checked ~.labels label:not(:nth-child(3)) {
+    background-color: #1087c9;
+}
+#btn3:checked ~.labels label:not(:nth-child(3)):hover {
+    background-color: #f5fcfc;
+    border-color: #f5fcfc;
+}
+#btn4:checked ~.labels label:not(:nth-child(4)) {
+    background-color: #1087c9;
+}
+#btn4:checked ~.labels label:not(:nth-child(4)):hover {
+    background-color: #f5fcfc;
+    border-color: #f5fcfc;
+}
+#btn5:checked ~.labels label:not(:nth-child(5)) {
+    background-color: #1087c9;
+}
+#btn5:checked ~.labels label:not(:nth-child(5)):hover {
+    background-color: #f5fcfc;
+    border-color: #f5fcfc;
+}

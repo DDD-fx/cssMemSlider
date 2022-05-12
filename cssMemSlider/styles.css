@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
 
 body {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -10,7 +10,7 @@ body {
     font-family: "Courier Prime", serif;
     font-weight: 400;
     padding: 1rem;
-    background-color: #efefef;
+    background-color: #383636;
     box-sizing: border-box;
 }
 
@@ -18,7 +18,7 @@ h1 {
     font-size: clamp(2rem, 5vw, 5rem);
     font-weight: 700;
     text-align: center;
-    color: #084e76;
+    color: #cd99ba;
     margin-bottom: max(1rem, 2rem);
 }
 
@@ -26,76 +26,81 @@ input {
     appearance: none;
 }
 
-.nav {
+.labels {
     display: flex;
     align-items: center;
 }
 
-.nav label {
-    width: max(1.3rem, 3rem);
-    height: max(1.3rem, 3rem);
+.labels label {
+    width: clamp(1vw, 3rem, 2vw);
+    height: clamp(1vw, 3rem, 2vw);
     cursor: pointer;
-    background-color: azure;
+    background-color: #383636;
+    border: 0.125rem solid #1087c9;
     border-radius: 50%;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 
-.nav label:not(:last-child) {
+.labels label:not(:last-child) {
     margin-right: max(1.3rem, 3rem);
 }
 
-.nav label:hover {
-    background-color: #91eeee;
+.labels label:hover {
+    border-color: #f5fcfc;
 }
-
-
 
 .slider {
     overflow: hidden;
     max-width: 100%;
-    margin-bottom: max(1rem, 2rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .slide {
-    height: 100%;
-    width: 20%;
-    display: flex;
-    justify-content: center;
 }
 
 .slide img{
     max-width: 100%;
-}
-
-
-#btn1:checked~.init {
-    margin-left: 0;
-}
-
-#btn2:checked~.init {
-    margin-left: -40%;
-}
-
-#btn3:checked~.init {
-    margin-left: -80%;
-}
-
-#btn4:checked~.init {
-    margin-left: -120%;
-}
-
-#btn5:checked~.init {
-    margin-left: -160%;
+    max-height: 100%;
+    object-fit: cover;
 }
 
 .wrapper {
-    width: 500%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    max-width: 100%;
+    max-height: 100%;
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-areas: 'meme-1 meme-2 meme-3 meme-4 meme-5';
 }
-
-#btn2:checked #label2 {
-    background-color: #084e76;
+.meme-1 {
+    grid-area: meme-1;
+}
+.meme-2 {
+    grid-area: meme-2;
+}
+.meme-3 {
+    grid-area: meme-3;
+}
+.meme-4 {
+    grid-area: meme-4;
+}
+.meme-5 {
+    grid-area: meme-5;
+}
+#btn1:checked ~.wrapper  {
+    grid-template-columns: 100% 0 0 0 0;
+}
+#btn2:checked ~.wrapper {
+    grid-template-columns: 0 100% 0 0 0;
+}
+#btn3:checked ~.wrapper {
+    grid-template-columns: 0 0 100% 0 0;
+}
+#btn4:checked ~.wrapper {
+    grid-template-columns: 0 0 0 100% 0;
+}
+#btn5:checked ~.wrapper {
+    grid-template-columns: 0 0 0 0 100%;
 }
