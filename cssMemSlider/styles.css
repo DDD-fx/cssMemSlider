@@ -3,9 +3,10 @@
 * {
     box-sizing: border-box;
 }
+
 body {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,15 +19,15 @@ body {
 }
 
 h1 {
-    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-size: clamp(2rem, 4vw, 3.1rem);
     font-weight: 700;
     text-align: center;
     color: #cd99ba;
-    margin-bottom: max(1rem, 2rem);
+    margin-bottom: 1.2rem;
 }
 
 input {
-    display: none;  /*-----!!!!!-------*/
+    display: none;  /*-----Allowed-------*/
 }
 
 .slider {
@@ -35,103 +36,58 @@ input {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 2rem;
+    /*gap: 2rem;*/
     padding: 1rem;
     border: 0.5rem double #4e4b4b;
     background-color: #242323;
 }
 
-.container{
+.wrapper {
+    display: grid;
+    padding-bottom: 2rem;
+}
+
+.container {
     width: min(100%, 40rem);
     height: min(100%, 40rem);
     display: flex;
     justify-content: space-between;
-}
-.meme-text {
-    font-size: 1.3rem;
-    color: beige;
-    display: grid;
-    grid-template-areas: "text-1 text-2 text-3 text-4 text-5";
-    width: 100%;
-}
-
-.meme-text > * {
-    overflow: hidden;
-    opacity: 100%;
-    transition: 1s;
-}
-
-.text-1 {
-    grid-area: text-1;
-}
-.text-2 {
-    grid-area: text-2;
-}
-.text-3 {
-    grid-area: text-3;
-}
-.text-4 {
-    grid-area: text-4;
-}
-.text-5 {
-    grid-area: text-5;
-}
-
-#btn1:checked ~.container .meme-text {
-    grid-template-columns: 100% 0 0 0 0;
-}
-#btn2:checked ~.container .meme-text {
-    grid-template-columns: 0 100% 0 0 0;
-}
-#btn3:checked ~.container .meme-text {
-    grid-template-columns: 0 0 100% 0 0;
-}
-#btn4:checked ~.container .meme-text {
-    grid-template-columns: 0 0 0 100% 0;
-}
-#btn5:checked ~.container .meme-text {
-    grid-template-columns: 0 0 0 0 100%
-}
-
-#btn1:checked ~.container .meme-text .txt:not(:nth-child(1))  {
-    opacity: 0;
-    transform: translateX(100%);
-}
-#btn2:checked ~.container .meme-text .txt:not(:nth-child(2))  {
-    opacity: 0;
-    transform: translateX(100%);
-}
-#btn3:checked ~.container .meme-text .txt:not(:nth-child(3))  {
-    opacity: 0;
-    transform: translateX(100%);
-}
-#btn4:checked ~.container .meme-text .txt:not(:nth-child(4))  {
-    opacity: 0;
-    transform: translateX(100%);
-}
-#btn5:checked ~.container .meme-text .txt:not(:nth-child(5))  {
-    opacity: 0;
-    transform: translateX(100%);
 }
 
 @media (max-width: 425.98px){
     body {
         padding: 0.5rem;
     }
-    .slider {
-        gap: 1.5rem;
+
+    .title{
+        margin-bottom: 1rem;
     }
+
+    .slider {
+        /*gap: 1.5rem;*/
+        padding: 0.5rem;
+    }
+
+    .wrapper {
+        padding-bottom: 1.5rem;
+    }
+
     .container {
         flex-direction: column-reverse;
-        gap: 1.5rem;
+        /*gap: 1.5rem;*/
         align-items: center;
     }
+
+    .labels {
+        padding-bottom: 1rem;
+    }
+
     .meme-text {
         align-self: flex-start;
         font-size: 1rem;
     }
+
     .labels .click-area {
         height: 2.5rem;
     }
 }
-

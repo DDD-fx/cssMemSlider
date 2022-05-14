@@ -38,12 +38,20 @@
     background-color: #f5fcfc;
     border-color: #f5fcfc;
 }
+#btn1:checked ~.container .labels label:not(:first-child):active {
+    background-color: #a4a4a4;
+    border-color: #a4a4a4;
+}
 #btn2:checked ~.container .labels label:not(:nth-child(2)) {
     background-color: #1087c9;
 }
 #btn2:checked ~.container .labels label:not(:nth-child(2)):hover {
     background-color: #f5fcfc;
     border-color: #f5fcfc;
+}
+#btn2:checked ~.container .labels label:not(:nth-child(2)):active {
+    background-color: #a4a4a4;
+    border-color: #a4a4a4;
 }
 #btn3:checked ~.container .labels label:not(:nth-child(3)) {
     background-color: #1087c9;
@@ -52,6 +60,10 @@
     background-color: #f5fcfc;
     border-color: #f5fcfc;
 }
+#btn3:checked ~.container .labels label:not(:nth-child(3)):active {
+    background-color: #a4a4a4;
+    border-color: #a4a4a4;
+}
 #btn4:checked ~.container .labels label:not(:nth-child(4)) {
     background-color: #1087c9;
 }
@@ -59,10 +71,18 @@
     background-color: #f5fcfc;
     border-color: #f5fcfc;
 }
+#btn4:checked ~.container .labels label:not(:nth-child(4)):active {
+    background-color: #a4a4a4;
+    border-color: #a4a4a4;
+}
 #btn5:checked ~.container .labels label:not(:nth-child(5)) {
     background-color: #1087c9;
 }
 #btn5:checked ~.container .labels label:not(:nth-child(5)):hover {
     background-color: #f5fcfc;
     border-color: #f5fcfc;
+}
+#btn5:checked ~.container .labels label:not(:nth-child(5)):active {
+    background-color: #a4a4a4;
+    border-color: #a4a4a4;
 }
