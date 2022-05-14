@@ -36,7 +36,6 @@ input {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /*gap: 2rem;*/
     padding: 1rem;
     border: 0.5rem double #4e4b4b;
     background-color: #242323;
@@ -51,7 +50,7 @@ input {
     width: min(100%, 40rem);
     height: min(100%, 40rem);
     display: flex;
-    justify-content: space-between;
+    padding-bottom: 2rem;
 }
 
 @media (max-width: 425.98px){
@@ -64,7 +63,6 @@ input {
     }
 
     .slider {
-        /*gap: 1.5rem;*/
         padding: 0.5rem;
     }
 
@@ -74,7 +72,6 @@ input {
 
     .container {
         flex-direction: column-reverse;
-        /*gap: 1.5rem;*/
         align-items: center;
     }
 
@@ -82,12 +79,16 @@ input {
         padding-bottom: 1rem;
     }
 
+    .labels .click-area {
+        height: 2.5rem;
+    }
+
     .meme-text {
         align-self: flex-start;
         font-size: 1rem;
     }
 
-    .labels .click-area {
-        height: 2.5rem;
+    .txt {
+        width: 80vw;
     }
 }
